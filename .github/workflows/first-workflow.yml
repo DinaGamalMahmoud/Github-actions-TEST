@@ -1,1 +1,13 @@
-# first workflow to configure
+name: first workflow
+on:
+  push:
+    branches:
+      - main
+jobs:
+  first-workflow:
+    name: first workflow
+    runs-on: ubuntu-latest
+    steps:
+      - name: run first step
+        run: echo  "first workflow"
+        shell: bash
