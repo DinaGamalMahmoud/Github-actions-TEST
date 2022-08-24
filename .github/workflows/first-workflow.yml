@@ -11,3 +11,16 @@ jobs:
       - name: run first step
         run: echo  "first workflow"
         shell: bash
+
+  run-python-script:
+    name: run python script
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: "0"
+
+      - name: run python command
+        run: print("Hello World")
+        shell: python
