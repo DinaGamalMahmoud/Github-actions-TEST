@@ -13,3 +13,16 @@ jobs:
         run: |-
           echo "my first workflow"
           echo "github actions demo"
+
+      - name: check github workspace contents
+        shell: bash
+        run: |-
+          ls
+
+      - name: checkout the code
+        uses: actions/checkout@v3
+
+      - name: check github workspace contents
+        shell: bash
+        run: |-
+          ls
